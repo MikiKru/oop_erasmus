@@ -18,6 +18,16 @@ public class User {
         this.password = password;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "login='" + login + '\'' +
+                ", password='" + "***" + '\'' +
+                ", registrationDateTime=" + registrationDateTime +
+                ", blocked=" + blocked +
+                '}';
+    }
+
     public int getUser_id() {
         return user_id;
     }
