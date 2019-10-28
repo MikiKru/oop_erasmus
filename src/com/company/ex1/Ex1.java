@@ -23,4 +23,20 @@ public class Ex1 {
             System.out.println(u);
         }
     }
+    // method for login user
+    public void loginUser(String login, String password){
+        // check whether the (login and password) is in users list
+        boolean isLogged = false;
+        for (User u : users) {
+            // conditional instruction
+            // if ( condition ){ implementation }
+            if(login.equals(u.getLogin()) && password.equals(u.getPassword())){
+                System.out.println("Logged user: " + u.getLogin());
+                isLogged = true;
+            }
+        }
+        if(!isLogged){
+            System.out.println("No user is logged!");
+        }
+    }
 }

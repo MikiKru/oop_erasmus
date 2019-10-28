@@ -9,5 +9,7 @@ public class Main {
         e.addUser("x@x.com","x");
 
         e.getAllUsers();
+        e.loginUser("x@x.com","y");
+        e.loginUser("x@x.com","x");
     }
 }
