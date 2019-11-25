@@ -1,4 +1,6 @@
-package com.company.ex1;
+package com.company.ex1.controller;
+import com.company.ex1.model.User;
+
 import java.util.ArrayList;
 import java.util.List;
 

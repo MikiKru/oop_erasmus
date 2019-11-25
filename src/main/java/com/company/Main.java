@@ -1,10 +1,16 @@
 package com.company;
+
+import com.company.ex1.model.User;
+
 // TIPS FOR IntelliJ
 // sout - System.out.println();
 // psvm - public static void main(String[] args) {}
 // CLTR + SHIFT + F10 - run
 public class Main {
     public static void main(String[] args) {
+        // somewhere in the project
+        User user = new User("test","test");
+        System.out.println(user.login);
         // constant value
         final double PI;
         System.out.println("Start Java");

@@ -1,4 +1,4 @@
-package com.company.ex1;
+package com.company.ex1.model;
 // JavaBeans design pattern
 // -> private fields
 // -> public getters and setters -> ALT + Insert
@@ -6,23 +6,39 @@ package com.company.ex1;
 import java.time.LocalDateTime;
 
 // model class -> class that determine data structure -> ORM - object relationship mapping
+
 public class User {
+    // static elements of the class
+    private static int global_id = 1;
     private int user_id;
-    private String login;
+    public String login;
     private String password;
     private LocalDateTime registrationDateTime = LocalDateTime.now();
     private boolean blocked = false;
 
+//    public static void main(String[] args) {
+//        User user = new User("test","test");
+//        System.out.println(user.login);
+//    }
+
+    public static int getGlobal_id(){
+        return global_id;
+    }
+
+
     public User(String login, String password) {
         this.login = login;
         this.password = password;
+        this.user_id = global_id;
+        global_id ++;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "login='" + login + '\'' +
-                ", password='" + "***" + '\'' +
+                "user_id=" + user_id +
+                ", login='" + login + '\'' +
+                ", password='" + password + '\'' +
                 ", registrationDateTime=" + registrationDateTime +
                 ", blocked=" + blocked +
                 '}';
