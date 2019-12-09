@@ -11,6 +11,6 @@ public class Main {
         uci.addUser("test2","test2");
         uci.getAllUsers();
         System.out.println("Founded user : " + uci.getUserById(2));
-        uci.setUserPassword(2,"xxx");
+        uci.setUserPassword(20,"xxx");
     }
 }

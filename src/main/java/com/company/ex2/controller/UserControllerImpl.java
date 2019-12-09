@@ -33,9 +33,16 @@ public class UserControllerImpl implements UserController {
     }
 
     @Override
-    public void setUserPassword(int user_id, String newPassword) {
-        getUserById(user_id).setPassword(newPassword);
-        getAllUsers();
+    public User setUserPassword(int user_id, String newPassword) {
+        User user;
+        try {
+            user = getUserById(user_id);
+            user.setPassword(newPassword);
+            getAllUsers();
+            return user;
+        } catch (NullPointerException e){
+            return null;
+        }
     }
 
 }

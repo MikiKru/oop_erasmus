@@ -16,6 +16,6 @@ public interface UserController {
     // Abstract method for getUser from users list based on user_id
     User getUserById(int user_id);
     // Abstract method for change user password for user taken from users list
-    void setUserPassword(int user_id, String newPassword);
+    User setUserPassword(int user_id, String newPassword);
 
 }
