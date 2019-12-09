@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserControllerImpl implements UserController {
-    
+
     @Override
     public void addUser(String login, String password) {
         // create user - create new object of class User
@@ -14,4 +14,20 @@ public class UserControllerImpl implements UserController {
         // save object user in users collection
         users.add(user);
     }
+
+    @Override
+    public void getAllUsers() {
+
+    }
+
+    @Override
+    public User getUserById(int user_id) {
+        return null;
+    }
+
+    @Override
+    public User setUserPassword(int user_id, String newPassword) {
+        return null;
+    }
+
 }
