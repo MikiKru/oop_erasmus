@@ -5,6 +5,7 @@ import com.company.ex1.model.User;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class UserControllerImpl implements UserController {
 
@@ -32,8 +33,9 @@ public class UserControllerImpl implements UserController {
     }
 
     @Override
-    public User setUserPassword(int user_id, String newPassword) {
-        return null;
+    public void setUserPassword(int user_id, String newPassword) {
+        getUserById(user_id).setPassword(newPassword);
+        getAllUsers();
     }
 
 }
