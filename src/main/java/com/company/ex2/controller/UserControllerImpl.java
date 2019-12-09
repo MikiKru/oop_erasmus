@@ -4,6 +4,7 @@ import com.company.ex1.model.User;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class UserControllerImpl implements UserController {
 
@@ -17,11 +18,16 @@ public class UserControllerImpl implements UserController {
 
     @Override
     public void getAllUsers() {
-
+        // generate predicate automatically CTRL + Space
+        users.forEach(System.out::println);
     }
 
     @Override
     public User getUserById(int user_id) {
+        Optional<User> userOpt = users.stream().filter(user -> user.getUser_id() == user_id).findAny();
+        if(userOpt.isPresent()){
+            return userOpt.get();
+        }
         return null;
     }
 

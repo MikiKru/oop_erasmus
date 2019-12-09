@@ -7,6 +7,10 @@ public class Main {
     public static void main(String[] args) {
         UserControllerImpl uci = new UserControllerImpl();
         uci.addUser("test","test");
-        
+        uci.addUser("test1","test1");
+        uci.addUser("test2","test2");
+        uci.getAllUsers();
+        System.out.println("Founded user : " + uci.getUserById(2));
+
     }
 }
